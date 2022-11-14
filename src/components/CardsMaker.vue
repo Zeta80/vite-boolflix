@@ -25,9 +25,9 @@ export default {
 <template>
     <div class="container wrapper">
         <div class="img-card">
-            <img :src="`${store.imgCard}${result.backdrop_path} `">
+            <img :src="`${store.imgCard}${result.poster_path} `">
         </div>
-        <div v-if="result.original_title" class="character-item text-center">
+        <div v-if="result.original_title" class="card-item text-center">
             <h4>{{ result.original_title }}</h4>
         </div>
         <div v-else>
@@ -41,6 +41,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.card-item {
+    padding: 15px;
+    height: 100%;
+}
+
 .flag {
     img {
         max-width: 50px;
