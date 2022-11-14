@@ -8,8 +8,11 @@ export default {
 </script>
 
 <template>
-    <div class="character-item text-center">
+    <div v-if="result.original_title" class="character-item text-center">
         <h4>{{ result.original_title }}</h4>
+    </div>
+    <div v-else>
+        <h4>{{ result.name }}</h4>
     </div>
 </template>
 
