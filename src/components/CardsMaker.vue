@@ -57,12 +57,11 @@ export default {
                 <p v-else> Lenguage: {{ result.original_language }} </p>
             </div>
             <div class="star">
-                <p>{{ result.vote_average }} - {{ getStarsNumber }}</p>
                 <span v-for="item in getStarsNumber">
-                    1
+                    <i class="fa-solid fa-star"></i>
                 </span>
                 <span v-for="item in (5 - getStarsNumber)">
-                    0
+                    <i class="fa-regular fa-star"></i>
                 </span>
 
             </div>
