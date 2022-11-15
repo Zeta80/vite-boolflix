@@ -11,12 +11,13 @@ export default {
             store,
 
 
+
         }
     },
     computed: {
-        stars() {
-            const starsNumber = (Number(this.result.vote_average) / 2).toFixed(0)
-            return starsNumber
+        getStarsNumber() {
+
+            return parseInt((Number(this.result.vote_average) / 2).toFixed(0))
         }
     },
     methods: {
@@ -28,6 +29,7 @@ export default {
         getImgUrl(imgName) {
             return new URL(`../assets/immagini-flag/${imgName}.png`, import.meta.url).href;
         },
+
 
     },
 }
@@ -55,16 +57,21 @@ export default {
                 <p v-else> Lenguage: {{ result.original_language }} </p>
             </div>
             <div class="star">
-                <p>{{ result.vote_average }}</p>
-                <span v-for="item in 5">
-                    {{ stars }}
+                <p>{{ result.vote_average }} - {{ getStarsNumber }}</p>
+                <span v-for="item in getStarsNumber">
+                    1
                 </span>
+                <span v-for="item in (5 - getStarsNumber)">
+                    0
+                </span>
+
             </div>
         </div>
     </div>
-</template>
 
-<style lang="scss" scoped>
+</template>
+            
+<style  lang ="scss" scoped>
 .wrapper {
     text-align: start;
 }
