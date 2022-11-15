@@ -35,5 +35,10 @@ export default {
     width: 90%;
     padding: 40px 0;
     margin: 0 auto;
+
+    h2 {
+        color: white;
+        margin-bottom: 40px;
+    }
 }
 </style>

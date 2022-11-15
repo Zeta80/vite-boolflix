@@ -39,8 +39,18 @@ export default {
 </script>
 
 <template>
-  <AppHeader @titleSearch="titleSearch" />
-  <AppMain />
+  <div class="bg-black cont">
+
+
+
+    <AppHeader @titleSearch="titleSearch" />
+
+
+
+    <AppMain />
+
+  </div>
+
 </template>
 
 

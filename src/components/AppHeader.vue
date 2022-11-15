@@ -13,20 +13,43 @@ export default {
 </script>
 
 <template>
-    <header class="d-flex ">
-        <h1 class=" text-center text-dark">Ciao</h1>
-        <input type="text" class="form-control" v-model="store.searchKey">
-        <button class="btn btn-primary" @click="$emit('titleSearch')">Search</button>
+    <header>
+        <div class="container">
+
+            <div class="wrapper  d-flex">
+
+                <h1 class=" text-start ">BoolFix</h1>
+                <div class="form d-flex">
+
+                    <input type="text" class="form-control" v-model="store.searchKey">
+                    <button class="btn btn-primary" @click="$emit('titleSearch')">Search</button>
+                </div>
+            </div>
+        </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-    height: 50px;
-    background-color: grey;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 9999;
 
-    input {
-        width: 200px;
+    .wrapper {
+        justify-content: space-between;
     }
+
+    h1 {
+        color: red;
+    }
+
+    .form {
+        align-items: center;
+    }
+
 }
 </style>

@@ -34,7 +34,11 @@ export default {
 .wrapper {
     width: 90%;
     padding: 40px 0;
-    margin: 0 auto;
+    margin: 70px auto;
+
+    h2 {
+        color: white;
+    }
 
 }
 </style>
