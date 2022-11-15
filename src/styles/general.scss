@@ -8,5 +8,6 @@ img {
 .cont {
     height: 100vh;
     overflow: scroll;
+    overflow-x: hidden;
     background-color: #434343;
 }
