@@ -21,7 +21,7 @@ export default {
 
             <h2 class="text-center">Lista Film</h2>
 
-            <div class=" cards row row-cols-2 row-cols-md-4 ">
+            <div class=" cards row row-cols-2 row-cols-md-4 g-3">
                 <div class="col" v-for="result in store.arrayMovie.results" :key="store.arrayMovie.results.id">
                     <CardsMaker :result="result" />
                 </div>
