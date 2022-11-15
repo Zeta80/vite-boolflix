@@ -53,6 +53,9 @@ export default {
                     <h3>{{ result.name }}</h3>
                     <h4>Titolo orignale:{{ result.original_name }}</h4>
                 </div>
+                <div>
+                    <p>{{ result.overview }}</p>
+                </div>
                 <div class="flag ">
                     <img v-if="availableFlags.includes(result.original_language)"
                         :src="getImgUrl(result.original_language)">
@@ -87,14 +90,18 @@ export default {
     &:hover .back-display {
         opacity: 1;
         display: block;
+
     }
 }
 
 .back-display {
     position: absolute;
+    max-height: 90%;
     top: 50%;
-    left: 0;
+    left: 10px;
     transform: translate(0, -50%);
+    overflow: scroll;
+    overflow-x: hidden;
 
     color: white;
     display: none;

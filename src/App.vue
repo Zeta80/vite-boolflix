@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <div class="bg-black cont">
+  <div class=" cont">
 
 
 
