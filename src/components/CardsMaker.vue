@@ -40,7 +40,14 @@ export default {
 
         <div class="front-display">
             <div class="img-card">
-                <img :src="`${store.imgCard}${result.poster_path} `">
+                <!-- <img :src="`${store.imgCard}${result.poster_path} `"> -->
+
+
+                <img v-if="result.poster_path" :src="`${store.imgCard}${result.poster_path}`" alt="">
+                <img class="not-found" v-else src="../assets/immagini-flag/wc-placeholder.jpg" alt="">
+
+
+
             </div>
 
 
@@ -92,6 +99,7 @@ export default {
         display: block;
 
     }
+
 }
 
 .back-display {
